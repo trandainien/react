@@ -1,5 +1,6 @@
 import "./ExpenseItem.css";
-
+import ExpenseDate from "./ExpenseDate";
+import Card from "./Card";
 function ExpenseItem({ title, amount, date }) {
   const clickHandler = () => {
     console.log("clicked!!!");
@@ -8,13 +9,12 @@ function ExpenseItem({ title, amount, date }) {
   return (
     <div className="expense-item">
       <div className="left">
-        <div>{date}</div>
-        <h2>{title}</h2>
+        <ExpenseDate title={title} date={date} />
       </div>
       <div className="right">
         <div>${amount}</div>
       </div>
-      <button onClick={clickHandler}>Change title</button>
+      {/* <button onClick={clickHandler}>Change title</button> */}
     </div>
   );
 }

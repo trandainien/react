@@ -1,0 +1,45 @@
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5em 0 1em;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-control {
+  padding: 0.4em;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 1.5rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.form-control:focus {
+  outline: none;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn > button {
+  border: none;
+  padding: 0.6em;
+  font-size: 1.2rem;
+  border-radius: 14px;
+  color: #fff;
+  background-color: #43c2ff;
+  cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import ExpenseItem from "./components/ExpenseItem";
-
+import Card from "./components/Card";
+import NewExpense from "./components/NewExpense/NewExpense";
 function App() {
   const expenses = [
     {
@@ -29,28 +30,18 @@ function App() {
   ];
 
   return (
-    <div>
-      <ExpenseItem
-        title={expenses[0].title}
-        date={expenses[0].date}
-        amount={expenses[0].amount}
-      />
-      <ExpenseItem
-        title={expenses[1].title}
-        date={expenses[1].date}
-        amount={expenses[1].amount}
-      />
-      <ExpenseItem
-        title={expenses[2].title}
-        date={expenses[2].date}
-        amount={expenses[2].amount}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses[3].title}
-        date={expenses[3].date}
-        amount={expenses[3].amount}
-      ></ExpenseItem>
-    </div>
+    <Card>
+      <NewExpense />
+      {expenses.map((expense) => {
+        return (
+          <ExpenseItem
+            title={expense.title}
+            date={expense.date}
+            amount={expense.amount}
+          ></ExpenseItem>
+        );
+      })}
+    </Card>
   );
 }
 
